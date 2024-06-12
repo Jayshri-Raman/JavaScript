@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+
+  </head>
+  <style>
+    body{
+  padding: 25px;
+}
+h1{
+  color: black;
+  align-items: center;
+}
+.box{
+  background-color: #FFE5B4;
+  width: 100%;
+  height: 400px;
+}
+  </style>
+  <body>
+    <div class="box">
+      <h1>Calculator</h1>
+      <input type="text" id="input1">
+      <input type="text" id="op2">
+      <input type="text" id="input2">
+      <button onclick="perform()">Calculate</button>
+      <div id="result">
+        
+      </div>
+    
+     </div>
+     <script>
+     function perform(){
+       
+       let ip1=Number(document.getElementById('input1').value);
+       let op2=document.getElementById('op2').value;
+      let ip2=Number(document.getElementById('input2').value);
+        let res=0;
+        switch(op2)
+        {
+          case '+':
+            res=ip1+ip2;
+            break
+            
+          case '-':
+            res=ip1-ip2;
+            break
+            
+          case '*':
+            res=ip1*ip2;
+            break
+            
+          case '/':
+            res=ip1/ip2;
+            break
+            
+        }
+        let result=document.getElementById('result');
+        result.innerHTML=res;
+     }
+ 
+     </script>
+  </body>
+</html>
