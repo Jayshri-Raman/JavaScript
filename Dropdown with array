@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <style>
+      /* CSS styles for dropdown */
+      #wrap {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      #option {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      /* Styles for dropdown options */
+      #option option {
+        background-color: #f9f9f9;
+      }
+
+      /* Styles for hover effect on dropdown options */
+      #option option:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <select id="option">select</select>
+    </div>
+    
+    <script>
+      // Array containing department names
+      let arr = ['ECE', 'CSE', 'IT', 'EEE', 'CSD', 'MECH', 'CIVIL'];
+      // Get reference to the select element
+      let selectElement = document.getElementById('option');
+      
+      // Loop through the array and create an option element for each department
+      for (let i = 0; i < arr.length; i++) {
+        let optionElement = document.createElement('option'); // Create option element
+        optionElement.textContent = arr[i]; // Set text content to department name
+        optionElement.value = arr[i]; // Set value attribute to department name
+        selectElement.appendChild(optionElement); // Append option element to select element
+      }
+    </script>
+  </body>
+</html>
